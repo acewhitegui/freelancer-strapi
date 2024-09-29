@@ -17,7 +17,8 @@
     },
     "description": {
       "type": "text",
-      "maxLength": 80
+      "maxLength": 256,
+      "required": true
     },
     "slug": {
       "type": "uid",
@@ -51,8 +52,20 @@
         "shared.media",
         "shared.quote",
         "shared.rich-text",
-        "shared.slider"
+        "shared.slider",
+        "shared.video-embed"
       ]
+    },
+    "authorsBio": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author",
+      "inversedBy": "articles"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }
