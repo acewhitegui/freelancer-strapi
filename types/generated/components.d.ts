@@ -76,20 +76,6 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
 }
 
-export interface MetaMetadata extends Struct.ComponentSchema {
-  collectionName: 'components_meta_metadata';
-  info: {
-    name: 'Metadata';
-    displayName: 'Metadata';
-    icon: 'robot';
-    description: '';
-  };
-  attributes: {
-    metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
-    metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
-  };
-}
-
 export interface SectionsTestimonialsGroup extends Struct.ComponentSchema {
   collectionName: 'components_slices_testimonials_groups';
   info: {
@@ -238,6 +224,20 @@ export interface SectionsBottomActions extends Struct.ComponentSchema {
     title: Schema.Attribute.String;
     buttons: Schema.Attribute.Component<'links.button-link', true>;
     description: Schema.Attribute.Text;
+  };
+}
+
+export interface MetaMetadata extends Struct.ComponentSchema {
+  collectionName: 'components_meta_metadata';
+  info: {
+    name: 'Metadata';
+    displayName: 'Metadata';
+    icon: 'robot';
+    description: '';
+  };
+  attributes: {
+    metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
   };
 }
 
@@ -485,7 +485,6 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.quote': SharedQuote;
       'shared.media': SharedMedia;
-      'meta.metadata': MetaMetadata;
       'sections.testimonials-group': SectionsTestimonialsGroup;
       'sections.rich-text': SectionsRichText;
       'sections.pricing': SectionsPricing;
@@ -497,6 +496,7 @@ declare module '@strapi/strapi' {
       'sections.feature-rows-group': SectionsFeatureRowsGroup;
       'sections.feature-columns-group': SectionsFeatureColumnsGroup;
       'sections.bottom-actions': SectionsBottomActions;
+      'meta.metadata': MetaMetadata;
       'links.social-link': LinksSocialLink;
       'links.link': LinksLink;
       'links.button': LinksButton;
