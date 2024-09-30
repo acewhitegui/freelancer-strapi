@@ -4,9 +4,9 @@
  * page router.
  */
 
-const {createCoreRouter} = require('@strapi/strapi').factories;
+import {factories} from '@strapi/strapi';
 
-module.exports = createCoreRouter('api::page.page', {
+module.exports = factories.createCoreRouter('api::page.page', {
     config: {
         find: {
             middlewares: ["api::page.page-populate-middleware"]
