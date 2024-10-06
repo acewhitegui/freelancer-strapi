@@ -4,17 +4,15 @@
   "private": true,
   "description": "A Strapi application",
   "scripts": {
-    "build": "strapi build",
-    "deploy": "strapi deploy",
     "dev": "strapi develop",
-    "seed:example": "node ./scripts/seed.js",
+    "build": "strapi build",
     "start": "strapi start",
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.0.1",
-    "@strapi/plugin-users-permissions": "5.0.1",
-    "@strapi/strapi": "5.0.1",
+    "@strapi/plugin-cloud": "5.0.2",
+    "@strapi/plugin-users-permissions": "5.0.2",
+    "@strapi/strapi": "5.0.2",
     "better-sqlite3": "9.4.3",
     "fs-extra": "^10.0.0",
     "mime-types": "^2.1.27",
