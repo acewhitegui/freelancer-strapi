@@ -13,7 +13,11 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "unique": true,
+      "required": true,
+      "minLength": 1,
+      "maxLength": 120
     },
     "description": {
       "type": "text",
