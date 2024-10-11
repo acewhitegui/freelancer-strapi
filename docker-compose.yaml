@@ -1,0 +1,21 @@
+services:
+  strapi:
+    image: freelancer-strapi
+    ports:
+      - "1337:1337"
+    environment:
+      HOST: 0.0.0.0
+      PORT: 1337
+      APP_KEYS: JS6zRecusZKS4FjNu5NEag==,0rIEYKYcs5vgprp2QucsRw==,ep2T7nGWWljFLv4MgQusgg==,17y4PNiSMEiQbAn3D3q5HA==
+      API_TOKEN_SALT: bDjRHGFVoXqJDLyN61uAUA==
+      ADMIN_JWT_SECRET: cllGXhdNQYqK0DoH23K8Eg==
+      TRANSFER_TOKEN_SALT: mYzweo+WRkB54zx7Myoh2Q==
+      DATABASE_CLIENT: postgres
+      DATABASE_HOST: 172.17.0.1
+      DATABASE_PORT: 5432
+      DATABASE_NAME: freelancer
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: difyai123456
+      DATABASE_SSL: false
+      DATABASE_FILENAME: .tmp/data.db
+      JWT_SECRET: uELsWmwfjMGMN0/FGj6E9Q==
