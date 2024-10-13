@@ -16,10 +16,18 @@ const populate = {
         populate: "*",
       },
       "sections.feature-columns-group": {
-        populate: "*",
+        populate: {
+          features: {
+            populate: "*",
+          }
+        },
       },
       "sections.feature-rows-group": {
-        populate: "*",
+        populate: {
+          features: {
+            populate: "*",
+          }
+        },
       },
       "sections.testimonials-group": {
         populate: {
